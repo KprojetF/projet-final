@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Bistrot — Restaurant</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+    <header class="header">
+        <a class="logo" href="#accueil">Le <span>Bistrot</span></a>
+        <nav>
+            <a href="#accueil">Accueil</a>
+            <a href="#menu">Notre menu</a>
+            <a href="#reservation">Réservation</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="accueil">
+            <div class="hero-content">
+                <p class="eyebrow">CUISINE FAITE MAISON</p>
+                <h1>Un bon repas,<br><span>un beau moment.</span></h1>
+                <p>Bienvenue au Bistrot, un restaurant convivial où les produits frais et la cuisine généreuse sont à l'honneur.</p>
+                <a class="button" href="#reservation">Réserver une table</a>
+            </div>
+            <div class="hero-image">
+                <div class="image-caption">SIMPLE · FRAIS · GOURMAND</div>
+            </div>
+        </section>
+
+        <section class="section" id="menu">
+            <div class="section-title">
+                <p class="eyebrow">À DÉCOUVRIR</p>
+                <h2>Notre menu</h2>
+                <p>Une sélection de plats préparés avec soin.</p>
+            </div>
+            <div class="menu-grid">
+                <article class="menu-card">
+                    <div class="dish-icon">🥗</div>
+                    <div class="dish-heading"><h3>Salade du marché</h3><strong>12 €</strong></div>
+                    <p>Salade fraîche, tomates, fromage et vinaigrette maison.</p>
+                </article>
+                <article class="menu-card">
+                    <div class="dish-icon">🍝</div>
+                    <div class="dish-heading"><h3>Pâtes crémeuses</h3><strong>16 €</strong></div>
+                    <p>Pâtes, crème, champignons et parmesan.</p>
+                </article>
+                <article class="menu-card">
+                    <div class="dish-icon">🍔</div>
+                    <div class="dish-heading"><h3>Burger du Bistrot</h3><strong>17 €</strong></div>
+                    <p>Steak, cheddar, salade, tomate et pommes de terre.</p>
+                </article>
+                <article class="menu-card">
+                    <div class="dish-icon">🍰</div>
+                    <div class="dish-heading"><h3>Fondant au chocolat</h3><strong>7 €</strong></div>
+                    <p>Un dessert au chocolat avec une touche de douceur.</p>
+                </article>
+                <article class="menu-card">
+                    <div class="dish-icon">🍮</div>
+                    <div class="dish-heading"><h3>Crème caramel</h3><strong>6 €</strong></div>
+                    <p>Une crème dessert délicatement nappée de caramel.</p>
+                </article>
+                <article class="menu-card">
+                    <div class="dish-icon">🥤</div>
+                    <div class="dish-heading"><h3>Boisson fraîche</h3><strong>4 €</strong></div>
+                    <p>Eau, jus de fruits ou boisson selon disponibilité.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="reservation-section" id="reservation">
+            <div class="reservation-intro">
+                <p class="eyebrow">VOTRE TABLE VOUS ATTEND</p>
+                <h2>Réservez<br><span>votre moment.</span></h2>
+                <p>Complétez le formulaire pour envoyer une demande de réservation. Nous vous confirmerons ensuite la disponibilité.</p>
+                <p class="small-note">Une demande envoyée ne vaut pas encore confirmation de réservation.</p>
+            </div>
+            <form class="reservation-form" action="../PHP/reservation.php" method="POST">
+                <label for="nom">Nom complet</label>
+                <input type="text" id="nom" name="nom" placeholder="Votre nom" maxlength="80" required>
+
+                <label for="email">Adresse e-mail</label>
+                <input type="email" id="email" name="email" placeholder="vous@exemple.fr" maxlength="120" required>
+
+                <div class="form-row">
+                    <div>
+                        <label for="date">Date</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div>
+                        <label for="heure">Heure</label>
+                        <select id="heure" name="heure" required>
+                            <option value="">Choisir</option>
+                            <option>12:00</option><option>12:30</option><option>13:00</option>
+                            <option>19:00</option><option>19:30</option><option>20:00</option><option>20:30</option>
+                        </select>
+                    </div>
+                </div>
+
+                <label for="personnes">Nombre de personnes</label>
+                <select id="personnes" name="personnes" required>
+                    <option value="">Choisir</option>
+                    <option value="1">1 personne</option>
+                    <option value="2">2 personnes</option>
+                    <option value="3">3 personnes</option>
+                    <option value="4">4 personnes</option>
+                    <option value="5">5 personnes</option>
+                    <option value="6">6 personnes</option>
+                </select>
+
+                <label for="message">Message (facultatif)</label>
+                <textarea id="message" name="message" rows="3" maxlength="500" placeholder="Une demande particulière ?"></textarea>
+
+                <button class="button" type="submit">Envoyer ma demande</button>
+            </form>
+        </section>
+
+        <section class="contact-section section" id="contact">
+            <div class="section-title left">
+                <p class="eyebrow">NOUS TROUVER</p>
+                <h2>Contact & adresse</h2>
+                <p>Nous serons ravis de vous accueillir.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <span class="contact-symbol">⌖</span>
+                    <h3>Adresse</h3>
+                    <p>12 rue des Gourmands<br>75000 Paris</p>
+                </div>
+                <div class="contact-card">
+                    <span class="contact-symbol">☎</span>
+                    <h3>Téléphone</h3>
+                    <p>01 23 45 67 89</p>
+                </div>
+                <div class="contact-card">
+                    <span class="contact-symbol">✉</span>
+                    <h3>E-mail</h3>
+                    <p>contact@lebistrot.fr</p>
+                </div>
+                <div class="contact-card">
+                    <span class="contact-symbol">◷</span>
+                    <h3>Horaires</h3>
+                    <p>Du mardi au dimanche<br>12h–14h et 19h–22h</p>
+                </div>
+            </div>
+            <p class="disclaimer">Informations fictives créées pour un projet scolaire. Pensez à les remplacer.</p>
+        </section>
+    </main>
+
+    <footer>
+        <a class="logo" href="#accueil">Le <span>Bistrot</span></a>
+        <p>Projet scolaire · Site de démonstration</p>
+        <p>© 2026 Le Bistrot</p>
+    </footer>
+</body>
+</html>
